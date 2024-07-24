@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>Pynapple G</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+		<link rel="stylesheet" href="pynapple.css">
+		<link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+		<link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster/dist/MarkerCluster.css"/>
+		<link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster/dist/MarkerCluster.Default.css"/>
+	</head>
+	<body>
+
+		<div id="loaderWrapper" class="loader-wrapper">
+			<div class="loader"></div>
+		</div>
+		
+		<div id="map"></div>
+		
+
+		<div class="container">
+			<div class="button-container">
+				<label for="fileInput1" class="custom-file-upload">
+					<span id="fileInputLabel1">Data Points/Polygon Layer</span>
+					<input type="file" id="fileInput1" accept=".zip, .txt, .csv" style="display: none;">
+				</label>
+				<button id="uploadButton1" class="upload-button" style="display: none;">Upload</button>
+			</div>
+		
+			<div class="button-container">
+				<label for="fileInput2" class="custom-file-upload">
+					<span id="fileInputLabel2">Polygon Layer</span>
+					<input type="file" id="fileInput2" accept=".zip" style="display: none;">
+				</label>
+				<button id="uploadButton2" class="upload-button" style="display: none;">Upload</button>
+			</div>
+		</div>
+				
+		
+		<div class="overlay bottom-overlay">
+			<button class="w3-button w3-black w3-large" onclick=callSGPAC()>Count</button> &nbsp;&nbsp;
+			<button class="w3-button w3-black w3-large" onclick=callDDCEL()>Polygonize</button> &nbsp;&nbsp;
+			<button class="w3-button w3-black w3-large" onclick=callOverlay()>Union</button> &nbsp;&nbsp;
+			<button class="w3-button w3-black w3-large" onclick=callSGPAC()>Intersect</button> &nbsp;&nbsp;
+			<button class="w3-button w3-black w3-large" onclick=callSGPAC()>Difference</button>
+		</div>
+		
+		<div class="right-bottom-button">
+			<button class="w3-button w3-black w3-large">Save Results</button>
+		</div>
+		
+		<script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+		<script src="https://unpkg.com/leaflet/dist/leaflet-heat.js"></script>
+		<script src="https://unpkg.com/shpjs@latest/dist/shp.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/wicket/1.3.6/wicket.min.js"></script>
+		<script src="https://unpkg.com/leaflet/dist/wicket-leaflet.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/@turf/turf"></script>
+		<script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+		<script src="https://unpkg.com/leaflet.heat/dist/leaflet-heat.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+		<script src="https://unpkg.com/leaflet.markercluster/dist/leaflet.markercluster.js"></script>
+		<script src="PynappleNew.js"></script>
+	</body>
+</html>
